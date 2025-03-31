@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import SparkleEffect from '@/components/ui/sparkle-effect';
 
 const ContactSection = () => {
   return (
@@ -45,75 +46,87 @@ const ContactSection = () => {
             
             <h3 className="text-xl font-semibold mb-4">Connect with me</h3>
             <div className="flex space-x-5">
-              <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
-                <Github size={20} />
-                <span className="sr-only">GitHub</span>
-              </a>
-              <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
-                <Mail size={20} />
-                <span className="sr-only">Email</span>
-              </a>
+              <SparkleEffect>
+                <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
+                  <Github size={20} />
+                  <span className="sr-only">GitHub</span>
+                </a>
+              </SparkleEffect>
+              <SparkleEffect>
+                <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
+                  <Linkedin size={20} />
+                  <span className="sr-only">LinkedIn</span>
+                </a>
+              </SparkleEffect>
+              <SparkleEffect>
+                <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
+                  <Instagram size={20} />
+                  <span className="sr-only">Instagram</span>
+                </a>
+              </SparkleEffect>
+              <SparkleEffect>
+                <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
+                  <Mail size={20} />
+                  <span className="sr-only">Email</span>
+                </a>
+              </SparkleEffect>
             </div>
           </div>
           
           <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
-            <Card className="bg-portfolio-dark-gray border-portfolio-purple/20">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
-                
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <SparkleEffect>
+              <Card className="bg-portfolio-dark-gray border-portfolio-purple/20">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
+                  
+                  <form className="space-y-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
+                        <Input
+                          id="name"
+                          className="bg-black border-portfolio-purple/30 focus:border-portfolio-purple w-full"
+                          placeholder="Your name"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
+                        <Input
+                          id="email"
+                          type="email"
+                          className="bg-black border-portfolio-purple/30 focus:border-portfolio-purple w-full"
+                          placeholder="Your email"
+                        />
+                      </div>
+                    </div>
+                    
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
+                      <label htmlFor="subject" className="block text-sm font-medium mb-1">Subject</label>
                       <Input
-                        id="name"
+                        id="subject"
                         className="bg-black border-portfolio-purple/30 focus:border-portfolio-purple w-full"
-                        placeholder="Your name"
+                        placeholder="Subject"
                       />
                     </div>
+                    
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
-                      <Input
-                        id="email"
-                        type="email"
-                        className="bg-black border-portfolio-purple/30 focus:border-portfolio-purple w-full"
-                        placeholder="Your email"
+                      <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
+                      <Textarea
+                        id="message"
+                        className="bg-black border-portfolio-purple/30 focus:border-portfolio-purple w-full min-h-[120px]"
+                        placeholder="Your message"
                       />
                     </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-1">Subject</label>
-                    <Input
-                      id="subject"
-                      className="bg-black border-portfolio-purple/30 focus:border-portfolio-purple w-full"
-                      placeholder="Subject"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
-                    <Textarea
-                      id="message"
-                      className="bg-black border-portfolio-purple/30 focus:border-portfolio-purple w-full min-h-[120px]"
-                      placeholder="Your message"
-                    />
-                  </div>
-                  
-                  <Button className="w-full bg-portfolio-purple hover:bg-portfolio-light-purple text-white">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                    
+                    <SparkleEffect>
+                      <Button className="w-full bg-portfolio-purple hover:bg-portfolio-light-purple text-white">
+                        Send Message
+                      </Button>
+                    </SparkleEffect>
+                  </form>
+                </CardContent>
+              </Card>
+            </SparkleEffect>
           </div>
         </div>
       </div>
