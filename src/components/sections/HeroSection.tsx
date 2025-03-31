@@ -3,6 +3,7 @@ import React from 'react';
 import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SparkleEffect from '@/components/ui/sparkle-effect';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   return (
@@ -12,11 +13,13 @@ const HeroSection = () => {
           {/* Avatar and profile - moved to the left */}
           <div className="mb-8 lg:mb-0 lg:mr-12 flex flex-col items-center lg:items-start animate-fade-in">
             <SparkleEffect>
-              <div className="w-32 h-32 rounded-full border-2 border-portfolio-purple bg-portfolio-dark-gray overflow-hidden animate-pulse-glow mb-6">
-                <div className="w-full h-full flex items-center justify-center text-portfolio-light-gray text-xl">
-                  Profile
-                </div>
+              <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-portfolio-purple bg-portfolio-dark-gray overflow-hidden animate-pulse-glow mb-2">
+                <Avatar className="w-full h-full">
+                  <AvatarImage src="/lovable-uploads/f87f069d-ed9c-4059-a8a1-4857f33fb1e8.png" alt="Vaddey Sesha" className="object-cover" />
+                  <AvatarFallback className="w-full h-full flex items-center justify-center text-portfolio-light-gray text-xl">VS</AvatarFallback>
+                </Avatar>
               </div>
+              <p className="text-white text-center font-medium mt-1">Profile</p>
             </SparkleEffect>
           </div>
 
@@ -38,25 +41,25 @@ const HeroSection = () => {
             {/* Social links with sparkle effect */}
             <div className="flex space-x-6 mb-8">
               <SparkleEffect>
-                <a href="#" className="text-white hover:text-portfolio-purple transition-colors">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-portfolio-purple transition-colors">
                   <Github size={24} />
                   <span className="sr-only">GitHub</span>
                 </a>
               </SparkleEffect>
               <SparkleEffect>
-                <a href="#" className="text-white hover:text-portfolio-purple transition-colors">
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-portfolio-purple transition-colors">
                   <Linkedin size={24} />
                   <span className="sr-only">LinkedIn</span>
                 </a>
               </SparkleEffect>
               <SparkleEffect>
-                <a href="#" className="text-white hover:text-portfolio-purple transition-colors">
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-portfolio-purple transition-colors">
                   <Instagram size={24} />
                   <span className="sr-only">Instagram</span>
                 </a>
               </SparkleEffect>
               <SparkleEffect>
-                <a href="#" className="text-white hover:text-portfolio-purple transition-colors">
+                <a href="mailto:vaddey.sesha@example.com" className="text-white hover:text-portfolio-purple transition-colors">
                   <Mail size={24} />
                   <span className="sr-only">Email</span>
                 </a>

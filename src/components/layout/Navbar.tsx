@@ -34,8 +34,8 @@ export function Navbar() {
       const sections = document.querySelectorAll('section[id]');
       
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
+        const sectionTop = (section as HTMLElement).offsetTop - 100;
+        const sectionHeight = (section as HTMLElement).offsetHeight;
         const sectionId = section.getAttribute('id') || '';
         
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {

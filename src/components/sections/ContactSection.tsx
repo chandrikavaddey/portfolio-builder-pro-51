@@ -47,25 +47,25 @@ const ContactSection = () => {
             <h3 className="text-xl font-semibold mb-4">Connect with me</h3>
             <div className="flex space-x-5">
               <SparkleEffect>
-                <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
                   <Github size={20} />
                   <span className="sr-only">GitHub</span>
                 </a>
               </SparkleEffect>
               <SparkleEffect>
-                <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
                   <Linkedin size={20} />
                   <span className="sr-only">LinkedIn</span>
                 </a>
               </SparkleEffect>
               <SparkleEffect>
-                <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
                   <Instagram size={20} />
                   <span className="sr-only">Instagram</span>
                 </a>
               </SparkleEffect>
               <SparkleEffect>
-                <a href="#" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
+                <a href="mailto:vaddey.sesha@example.com" className="bg-portfolio-dark-gray p-3 rounded-full text-white hover:text-portfolio-purple transition-colors border border-portfolio-purple/30 hover:border-portfolio-purple">
                   <Mail size={20} />
                   <span className="sr-only">Email</span>
                 </a>

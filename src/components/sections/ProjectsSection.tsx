@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -10,7 +10,6 @@ interface Project {
   description: string;
   image: string;
   tags: string[];
-  githubUrl: string;
   liveUrl: string;
 }
 
@@ -21,7 +20,6 @@ const projects: Project[] = [
     description: "A machine learning project that identifies and categorizes objects in images using TensorFlow and Python.",
     image: "bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3')] bg-cover bg-center",
     tags: ["Python", "TensorFlow", "Computer Vision", "ML"],
-    githubUrl: "#",
     liveUrl: "#"
   },
   {
@@ -30,7 +28,6 @@ const projects: Project[] = [
     description: "A full-stack e-commerce solution with user authentication, product management, and payment processing.",
     image: "bg-[url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3')] bg-cover bg-center",
     tags: ["Django", "React", "PostgreSQL", "Redux"],
-    githubUrl: "#",
     liveUrl: "#"
   },
   {
@@ -39,7 +36,6 @@ const projects: Project[] = [
     description: "Interactive dashboard for visualizing financial data and market trends with real-time updates.",
     image: "bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3')] bg-cover bg-center",
     tags: ["D3.js", "Vue.js", "Express", "MongoDB"],
-    githubUrl: "#",
     liveUrl: "#"
   },
   {
@@ -48,7 +44,6 @@ const projects: Project[] = [
     description: "IoT solution for home automation with a web interface to control connected devices.",
     image: "bg-[url('https://images.unsplash.com/photo-1558002038-2c603124ee4e?ixlib=rb-4.0.3')] bg-cover bg-center",
     tags: ["IoT", "Python", "MQTT", "React"],
-    githubUrl: "#",
     liveUrl: "#"
   },
   {
@@ -57,7 +52,6 @@ const projects: Project[] = [
     description: "API for text analysis, sentiment detection, and language processing tasks.",
     image: "bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3')] bg-cover bg-center",
     tags: ["NLP", "FastAPI", "Docker", "AWS"],
-    githubUrl: "#",
     liveUrl: "#"
   },
   {
@@ -66,7 +60,6 @@ const projects: Project[] = [
     description: "Tool for analyzing social media engagement and providing actionable insights for marketing teams.",
     image: "bg-[url('https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?ixlib=rb-4.0.3')] bg-cover bg-center",
     tags: ["Data Analysis", "Python", "React", "Graph Algorithms"],
-    githubUrl: "#",
     liveUrl: "#"
   }
 ];
@@ -108,14 +101,14 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 
-                <div className="flex gap-3 mt-auto">
-                  <Button size="sm" variant="outline" className="flex-1 border-portfolio-purple/70 text-white hover:bg-portfolio-purple hover:text-white">
-                    <Github size={16} className="mr-2" />
-                    Code
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex-1 border-portfolio-purple/70 text-white hover:bg-portfolio-purple hover:text-white">
+                <div className="mt-auto">
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-portfolio-purple/70 text-white hover:bg-portfolio-purple hover:text-white"
+                    onClick={() => window.open(project.liveUrl, '_blank')}
+                  >
                     <ExternalLink size={16} className="mr-2" />
-                    Demo
+                    Visit Site
                   </Button>
                 </div>
               </CardContent>

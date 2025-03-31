@@ -45,15 +45,11 @@ const AboutSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
           <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
-            <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
             <p className="text-gray-300 mb-4">
-              I'm a Full Stack Python Developer with a passion for Machine Learning. As a recent graduate, I'm eager to apply my knowledge and skills in real-world projects.
-            </p>
-            <p className="text-gray-300 mb-4">
-              During my studies, I developed a strong foundation in both frontend and backend technologies. I enjoy solving complex problems and creating efficient, user-friendly applications.
+              I'm a Full Stack Python Developer with a passion for Machine Learning. As a recent graduate, I'm excited to apply my knowledge and create innovative solutions.
             </p>
             <p className="text-gray-300">
-              When I'm not coding, you might find me exploring new technologies, contributing to open-source, or sharing my knowledge through technical writing and community involvement.
+              My focus is on developing efficient, user-friendly applications using modern web technologies. I'm always eager to learn new skills and explore emerging technologies in the field.
             </p>
           </div>
           
@@ -61,21 +57,21 @@ const AboutSection = () => {
             <h3 className="text-2xl font-semibold mb-4">My Experience</h3>
             <div className="space-y-4">
               <div className="border-l-2 border-portfolio-purple pl-4 pb-4">
-                <h4 className="text-xl font-medium">Python Developer Intern</h4>
-                <p className="text-portfolio-purple">TechStart Inc. (2023 - 2024)</p>
-                <p className="text-gray-300 mt-2">Assisted in developing web applications using Python, Django, and React. Collaborated with senior developers on various projects.</p>
+                <h4 className="text-xl font-medium">Junior Python Developer</h4>
+                <p className="text-portfolio-purple">Freelance (2024 - Present)</p>
+                <p className="text-gray-300 mt-2">Working on web development projects using Python, Django, and React.</p>
               </div>
               
               <div className="border-l-2 border-portfolio-purple pl-4 pb-4">
                 <h4 className="text-xl font-medium">Computer Science Graduate</h4>
                 <p className="text-portfolio-purple">University of Technology (2020 - 2024)</p>
-                <p className="text-gray-300 mt-2">Completed Bachelor of Science in Computer Science with focus on software development and machine learning.</p>
+                <p className="text-gray-300 mt-2">Bachelor of Science in Computer Science with focus on software development and machine learning.</p>
               </div>
               
               <div className="border-l-2 border-portfolio-purple pl-4">
-                <h4 className="text-xl font-medium">Student Developer</h4>
-                <p className="text-portfolio-purple">University Tech Club (2022 - 2023)</p>
-                <p className="text-gray-300 mt-2">Led a team of students in developing web applications for university events and activities.</p>
+                <h4 className="text-xl font-medium">Web Development Intern</h4>
+                <p className="text-portfolio-purple">Tech Solutions (2023)</p>
+                <p className="text-gray-300 mt-2">3-month internship focused on frontend development with React and TypeScript.</p>
               </div>
             </div>
           </div>
